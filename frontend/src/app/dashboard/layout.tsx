@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import { JSX, SVGProps } from "react";
+import { ModeToggle } from "@/components/ui/dark-mode-toggle";
 
 export default function DashboardLayout({
   children,
@@ -57,6 +58,7 @@ export default function DashboardLayout({
             <span className="sr-only">Home</span>
           </Link>
           <div className="w-full flex-1"></div>
+          <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
