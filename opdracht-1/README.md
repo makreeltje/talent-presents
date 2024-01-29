@@ -28,4 +28,4 @@ In de loop is het mogelijk om `digitalWrite()` te gebruiken met daarbij het aang
 
 ![upload-program](../images/upload-program.jpeg)
 
-Indien je er niet uitkomt is het mogelijk om in [opdracht-1](./opdracht-1.ino) te kijken voor de oplossing.
+Indien je er niet uitkomt, is het mogelijk om in [opdracht-1](./opdracht-1.ino) te kijken voor de oplossing.
