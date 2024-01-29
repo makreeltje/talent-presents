@@ -5,7 +5,7 @@ Met deze opdracht willen we kijken of jullie het lukt om een stoplicht te maken 
 **Arduino**
 1. Bouw het volgende schema op je breadboard en Arduino
 
-![opdracht-2](./opdracht-2a.svg)
+![opdracht-2a](./opdracht-2a.svg)
 
 2. Steek de Arduino in je laptop
 3. Open de Arduino IDE

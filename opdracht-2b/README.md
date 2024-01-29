@@ -1,4 +1,4 @@
-# Opdracht 2a
+# Opdracht 2b
 **LED met knop**
 
 Met deze opdracht willen we kijken of jullie het lukt om een led te besturen met een fysieke knop.
@@ -6,7 +6,7 @@ Met deze opdracht willen we kijken of jullie het lukt om een led te besturen met
 **Arduino**
 1. Bouw het volgende schema op je breadboard en Arduino
 
-![opdracht-2](./opdracht-2b.svg)
+![opdracht-2b](./opdracht-2b.svg)
 
 2. Steek de Arduino in je laptop
 3. Open de Arduino IDE
