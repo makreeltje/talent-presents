@@ -20,7 +20,7 @@ Met de eerste opdracht willen we kijken of jullie het lukt om een ledje te bestu
 
 Maak nu een programma waarbij je het ledje op poort 9 van de Arduino kan besturen.
 
-Maak hier gebruik van `pinMode()` waarbij je aangeeft dat poort `9` als `OUTPUT` fungeert in de `setup()`.
+Maak hier gebruik van `pinMode()` waarbij je aangeeft dat poort `9` als `OUTPUT` fungeert (bijvoorbeeld `pinMode(9, OUTPUT)`) in de `setup()`.
 
 In de loop is het mogelijk om `digitalWrite()` te gebruiken met daarbij het aangeven welke poort (in dit geval `9`) en of je de `OUTPUT` `HIGH` (voor aan) en `LOW` (voor uit) gebruikt.
 
