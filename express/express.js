@@ -1,14 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const five = require('johnny-five');
+import express from 'express';
+import { json, urlencoded } from 'body-parser';
+import { Board, Led } from 'johnny-five';
 
 const app = express();
-const board = new five.Board();
+const board = new Board();
 let status;
 let led;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(json());
+app.use(urlencoded({ extended: true }));
 
 app.post("/api/led-blink", function (req, res) {
     led.blink(req.body.interval);
@@ -39,8 +39,8 @@ function startServer() {
 }
 
 board.on('ready', () => {
-    status = new five.Led(13);
-    led = new five.Led(5);
+    status = new Led(13);
+    led = new Led(5);
     status.on();
     startServer();
 });

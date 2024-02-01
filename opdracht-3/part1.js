@@ -1,7 +1,6 @@
-let five = require("johnny-five");
-let board = new five.Board();
+import { Board } from "johnny-five";
+let board = new Board();
 
 board.on("ready", () => {
-    let led = new five.Led(13);
-    led.blink(1000);
+  console.log("Program is ready!");
 });
