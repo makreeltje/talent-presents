@@ -41,7 +41,7 @@ export default function Leds() {
           }}
         />
       </div>
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className=" flex flex-initial justify-evenly flex-wrap gap-5 ">
         {leds.length < 1 ? (
           <h2>You have no leds configured yet</h2>
         ) : (

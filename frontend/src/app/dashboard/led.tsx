@@ -10,7 +10,7 @@ import {
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Led } from "./page";
-import { ledOn, ledBlink, ledPulse, ledOff } from "./led-api-calls";
+import { ledOn, ledOff } from "./led-api-calls";
 import IntervalInput from "./interval-input";
 
 type LedProps = {
@@ -30,38 +30,6 @@ export default function Led({ led, updateStatus }: LedProps) {
     },
   });
 
-  const ledBlinkMutation = useMutation({
-    mutationFn: (interval: number) => ledBlink(led.port, interval),
-    onSuccess: (data, interval) => {
-      updateStatus({
-        ...led,
-        blink: true,
-        pulse: false,
-        blinkInterval: interval,
-      });
-      toast.success(data.text());
-    },
-    onError: (e) => {
-      toast.error(e.message);
-    },
-  });
-
-  const ledPulseMutation = useMutation({
-    mutationFn: (interval: number) => ledPulse(led.port, interval),
-    onSuccess: (data, interval) => {
-      updateStatus({
-        ...led,
-        pulse: true,
-        blink: false,
-        pulseInterval: interval,
-      });
-      toast.success(data.text());
-    },
-    onError: (e) => {
-      toast.error(e.message);
-    },
-  });
-
   const ledOffMutation = useMutation({
     mutationFn: () => ledOff(led.port),
     onSuccess: (data) => {
@@ -72,6 +40,8 @@ export default function Led({ led, updateStatus }: LedProps) {
       toast.error(e.message);
     },
   });
+
+  //TODO Opdracht 4b
 
   function toggleLed() {
     if (led.isActive) {
@@ -84,9 +54,9 @@ export default function Led({ led, updateStatus }: LedProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{led.name}</CardTitle>
+        <CardTitle className=" text-center ">{led.name}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className=" flex justify-center ">
         <Button
           className=" border cursor-pointer bg-red-700 data-[active=true]:bg-green-700 "
           data-active={led.isActive}
@@ -95,24 +65,29 @@ export default function Led({ led, updateStatus }: LedProps) {
           {led.isActive ? "on" : "off"}
         </Button>
       </CardContent>
-      <CardFooter className=" flex justify-evenly ">
+      {/* //TODO Opdracht 4b */}
+      {/* <CardFooter className=" flex justify-evenly gap-5 ">
         {led.isActive ? (
           <>
             <IntervalInput
               name="Blink"
               isActive={led.blink}
-              onSubmitInterval={(interval) => ledBlinkMutation.mutate(interval)}
+              onSubmitInterval={(interval) => {
+                toast.error("Not yet Implemented");
+              }}
             />
             <IntervalInput
               name="Pulse"
               isActive={led.pulse}
-              onSubmitInterval={(interval) => ledPulseMutation.mutate(interval)}
+              onSubmitInterval={(interval) => {
+                toast.error("Not yet Implemented");
+              }}
             />
           </>
         ) : (
           <></>
         )}
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   );
 }

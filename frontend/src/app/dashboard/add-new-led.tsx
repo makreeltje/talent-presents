@@ -46,9 +46,6 @@ export default function AddNewLed({ addNewLed }: AddNewLedProps) {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-
     addNewLed({
       id: v4(),
       name: values.name,

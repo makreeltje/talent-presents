@@ -2,15 +2,17 @@
 
 **Opdracht 4b**
 
-Nu is het ook mogelijk om een led te laten knipperen of pulseren. Probeer in de functies ledPulse en ledBlink nu een interval mee te geven zodat de led gaat knipperen.
+Het is ook mogelijk om een led te laten knipperen of pulseren. Probeer nu zelf de functies ledPulse en ledBlink te maken en hieraan een interval mee te geven zodat de led gaat knipperen.
 
-&nbsp;
+![Alt text](image.png)
 
-&nbsp;
+* In het bestand `Led.tsx` kun je de comment bij 4b weghalen en zelf de implementatie afmaken.
+* Het bestand ``` led-api-calls.tsx ``` kun je verder uitbreiden met de functies ledPulse en ledBlink.
 
-&nbsp;
-
-&nbsp;
+Let op dat je voor blink en pulse een interval mee moet geven in het request.
+```ts 
+Interval: number 
+```
 
 **Oplossing 4a**
 
